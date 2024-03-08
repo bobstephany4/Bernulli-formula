@@ -1,0 +1,23 @@
+import math
+
+def bernoulli_formula(n, k, p):
+    """
+    Computes the Bernoulli formula.
+
+    Parameters:
+        n (int): Total number of trials.
+        k (int): Number of successful outcomes.
+        p (float): Probability of success.
+
+    Returns:
+        float: Probability of k successes out of n trials.
+    """
+    return (math.comb(n, k)) * (p ** k) * ((1 - p) ** (n - k))
+
+# Example usage:
+n = 10  # Total number of trials
+k = 2   # Number of successful outcomes
+p = 0.5 # Probability of success
+
+probability = bernoulli_formula(n, k, p)
+print("Probability:", probability)
